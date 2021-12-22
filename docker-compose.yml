@@ -1,0 +1,13 @@
+services:
+  api:
+    image: node:14.18.1
+    container_name: classroom-service-ts-ddd
+    command: "tail -f /dev/null"
+    ports:
+      - 8000:8000
+    working_dir: /app
+    volumes:
+      - .:/app
+networks:
+  default:
+    name: yaydoo
