@@ -1,6 +1,6 @@
 import { StatusEnum } from "./status-enum";
 import { StatusId } from "./status-id";
-import { ValueObject } from "../shared/domain/value-object";
+import { ValueObject } from "../../shared/domain/value-object";
 
 export class Status extends ValueObject<StatusId> {
   protected value!: StatusId;

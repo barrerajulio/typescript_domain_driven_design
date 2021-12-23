@@ -12,6 +12,11 @@ export class Student {
     this.setId(id);
     this.setName(name);
     this.setStatus(status);
+    /*
+    DomainEventPublisher.instance().publish(
+      new StudentRegistered(this.id)
+    );
+  */
   }
 
   static create(id: StudentId, status: Status, name: string): Student {
@@ -40,6 +45,16 @@ export class Student {
       StudentValidationHandler.create()
     );
     validator.validate();
+  }
+
+  publish(): void {
+    this.setStatus(Status.published());
+
+    /*
+      DomainEventPublisher.instance().publish(
+        new PostPublished(this.id)
+    );
+    */
   }
 
   private setId(id: StudentId): void {

@@ -1,6 +1,6 @@
 import { Student } from "./student";
 import { StudentValidationHandler } from "./student-validation-handler";
-import { Validator } from "../shared/domain/validator";
+import { Validator } from "../../shared/domain/validator";
 
 export class StudentValidator extends Validator<StudentValidationHandler> {
   private student: Student;

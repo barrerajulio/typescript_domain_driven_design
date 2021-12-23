@@ -1,5 +1,5 @@
 import { StatusEnum } from "./status-enum";
-import { ValueObject } from "../shared/domain/value-object";
+import { ValueObject } from "../../shared/domain/value-object";
 
 export class StatusId extends ValueObject<number> {
   static create(statusId: StatusEnum): StatusId {

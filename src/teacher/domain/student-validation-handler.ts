@@ -1,5 +1,5 @@
-import { InvalidException } from "../shared/domain/invalid-exception";
-import { IValidationHandler } from "../shared/interfaces/validation-handler";
+import { InvalidException } from "../../shared/domain/invalid-exception";
+import { IValidationHandler } from "../../shared/interfaces/validation-handler";
 
 export class StudentValidationHandler implements IValidationHandler {
   static create() {
