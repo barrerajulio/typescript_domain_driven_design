@@ -15,6 +15,10 @@ export class Id extends ValueObject<string> {
     return new Id(id);
   }
 
+  toString(): string {
+    return this.value;
+  }
+
   protected setValue(id: string): void {
     this.value = id;
   }
