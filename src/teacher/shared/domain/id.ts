@@ -1,22 +1,21 @@
-export class Id {
-  protected id!: string;
+import { ValueObject } from "./value-object";
+
+export class Id extends ValueObject<string> {
+  protected value!: string;
 
   protected constructor(id?: string) {
     if (!id) {
       id = "initialize-with-a-valid-uuid";
     }
-    this.setId(id);
+    super(id);
+    this.setValue(id);
   }
 
   static create(id?: string) {
     return new Id(id);
   }
 
-  getId(): string {
-    return this.id;
-  }
-
-  protected setId(id: string): void {
-    this.id = id;
+  protected setValue(id: string): void {
+    this.value = id;
   }
 }
